@@ -238,15 +238,16 @@ class Library {
         }
 
         bool interface(){ // menu, lots of if else statement
-            int opition = 0;
-            cout << "Welcome to Bookmanage system" << endl;
-            cout << "Enter 1 for Add a book" << endl;
-            cout << "Enter 2 for Remove a book" << endl;
-            cout << "Enter 3 for Search a book" << endl;
-            cout << "Enter 4 for Display books in sorted order" << endl;
-            cout << "Enter 0 to stop" << endl;
-            cin >> opition;
-            if (opition == 1){
+            int option = 0;
+            cout << "Welcome to the Book Management System" << endl;
+            cout << "Enter 1 to add a book" << endl;
+            cout << "Enter 2 to remove a book" << endl;
+            cout << "Enter 3 to search for a book" << endl;
+            cout << "Enter 4 to display books in a sorted order" << endl;
+            cout << "Enter 0 to stop the program" << endl;
+            cout << "Created by Anh, Rachel, & Victor" << endl;
+            cin >> option;
+            if (option == 1){
                 string t;
                 string a;
                 long int i;
@@ -257,30 +258,30 @@ class Library {
                 cin >> i;
                 cin >> num;
                 addBooks(t, a, i, num);
-            } else if (opition == 2){
+            } else if (option == 2){
                 cout << "Enter the title, number of books you want to remove in order" << endl;
                 string t;
                 int num;
                 cin >> t;
                 cin >> num;
                 removeBooks(t, num);
-            } else if (opition == 3){
+            } else if (option == 3){
                 string t;
                 cout << "Enter the title of the book you want to search" << endl;
                 cin >> t;
                 searchBook(t);
-            } else if (opition == 4){
-                cout << "Would you like to Display by Available or Alphabetically?" << endl;
-                cout << "Enter 1 for Avalable, 2 for Alphabetically" << endl;
-                cin >> opition;
-                if (opition == 1){
+            } else if (option == 4){
+                cout << "Would you like to display by availability or alphabetically?" << endl;
+                cout << "Enter 1 for availablility, 2 for alphabetically" << endl;
+                cin >> option;
+                if (option == 1){
                     displayAvailable();
-                } else if(opition == 2){
+                } else if(option == 2){
                     displayAlphabetically();
                 } else{
                     cout << "Invalid input!" << endl;
                 }
-            } else if (opition ==0){
+            } else if (option ==0){
                 return false;
             } else{
                 cout << "Invalid input!" << endl;
